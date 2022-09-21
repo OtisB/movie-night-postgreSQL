@@ -1,0 +1,10 @@
+.genre-section {
+    min-height: 74vh;
+    margin: 4rem 0;
+}
+
+.genre-cards-row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

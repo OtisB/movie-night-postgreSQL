@@ -1,0 +1,61 @@
+.LoginWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.LoginButton {
+  width: 20vw;
+  background-color: var(--secundary-color);
+  border-style: none;
+  text-transform: uppercase;
+  border-radius: 0 0 10px 10px;
+}
+
+.LoginButton:hover {
+  cursor: pointer;
+}
+
+.SignUpWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+}
+
+.NotAMember {
+  color: gray;
+  margin-right: 0.3rem;
+}
+
+input {
+  width: 20vw;
+  height: 8vh;
+  border-style: none;
+}
+.InputTop {
+  border-radius: 10px 10px 0 0;
+}
+
+input:hover {
+  background-color: gray;
+  color: var(--secundary-color);
+  font-size: 1.5rem;
+}
+
+input:hover::placeholder {
+  color: var(--secundary-color);
+  font-size: 1.5rem;
+}
+
+.SignUpNow {
+  color: var(--secundary-color);
+  border-style: none;
+  background: transparent;
+}
+
+.SignUpNow:hover {
+  cursor: pointer;
+}

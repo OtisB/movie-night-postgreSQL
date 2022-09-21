@@ -1,0 +1,19 @@
+body {
+  height: 90vh;
+  margin: 4rem 0;
+  background: #0f2027;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right,
+      #2c6462,
+      #20433d,
+      #0e2c21);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2c6462, #20433d, #0e2c21);
+}
+
+.maincontainer,
+.no-data-message {
+  height: 32vh;
+  margin: 16rem 0;
+  text-align: center;
+}

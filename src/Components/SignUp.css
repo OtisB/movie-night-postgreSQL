@@ -1,0 +1,73 @@
+.SignUpWrapepr {
+  background-color: var(--nav-background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.SignUpButton {
+  width: 20vw;
+  background-color: var(--secundary-color);
+  border-style: none;
+  text-transform: uppercase;
+}
+
+.SignUpButton:hover {
+  cursor: pointer;
+}
+
+.Input {
+  width: 20vw;
+  height: 8vh;
+  border-style: none;
+}
+
+.Input:hover {
+  background-color: gray;
+  color: var(--secundary-color);
+  font-size: 2rem;
+}
+.Input:hover::placeholder {
+  color: var(--secundary-color);
+  font-size: 2rem;
+}
+
+.SignUpNow {
+  color: var(--secundary-color);
+}
+
+.BackToLogin {
+  background: transparent;
+  font-size: 1rem;
+  border-style: none;
+}
+
+.setBorderTop {
+  border-radius: 10px 10px 0 0;
+}
+
+.setBorderBottom {
+  border-radius: 0 0 10px 10px;
+}
+.SignInWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+}
+.alreadyAMember {
+  color: gray;
+  margin-right: 0.3rem;
+}
+
+.SignInNow {
+  color: var(--secundary-color);
+  border-style: none;
+  background: transparent;
+}
+
+.SignInNow:hover {
+  cursor: pointer;
+}

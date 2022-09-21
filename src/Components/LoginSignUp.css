@@ -1,0 +1,16 @@
+.LoginSingUpWrapper {
+  background: #0f2027;
+  background: -webkit-linear-gradient(to right, #2c6462, #20433d, #0e2c21);
+  background: linear-gradient(to right, #2c6462, #20433d, #0e2c21);
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Greeting {
+  color: var(--secundary-color);
+  display: flex;
+  justify-content: center;
+}
