@@ -9,7 +9,7 @@ function DetailView() {
     const { id } = useParams();
     const movies = useDataFetch();
 
-    const currentMovie = movies.find(movie => id == movie.id);
+    const currentMovie = movies.find(movie => id == movie.movie_id);
 
     const listOf = (arr) => {
         let i = 0;
@@ -27,25 +27,25 @@ function DetailView() {
 
     return (
         <>
-            {currentMovie !== undefined ? <article key={currentMovie.id} className="detail-view-container">
+            {currentMovie !== undefined ? <article key={currentMovie.movie_id} className="detail-view-container">
                 <figure>
                     <img
                         className="detail-view-image"
-                        src={currentMovie.fieldImageQuer}
-                        alt={currentMovie.fieldTitle}
+                        src={currentMovie.picture_big}
+                        alt={currentMovie.movie_title}
                     />
                 </figure>
                 <div className="detail-view-info">
-                    <h2>{currentMovie.fieldTitle}</h2>
-                    <p>FSK: {currentMovie.fieldFsk}</p>
-                    <p>Rating: <Rating rating={currentMovie.fieldRating} /></p>
-                    <p>Runtime: {currentMovie.fieldRuntime} Minutes</p>
-                    <p>Production Year: {currentMovie.fieldYearOfPuplication}</p>
-                    <p>Directors: {listOf(currentMovie.fieldDirectors)}</p>
-                    <p>Actors: {listOf(currentMovie.fieldCast)}</p>
-                    <p>Screenwriter: {currentMovie.fieldScreenwriter}</p>
+                    <h2>{currentMovie.movie_title}</h2>
+                    <p>FSK: {currentMovie.fsk}</p>
+                    <p>Rating: <Rating rating={currentMovie.rating} /></p>
+                    <p>Runtime: {currentMovie.runtime} Minutes</p>
+                    <p>Production Year: {currentMovie.year_of_publication}</p>
+                    <p>Directors: {listOf(currentMovie.director)}</p>
+                    <p>Actors: {listOf(currentMovie.actors)}</p>
+                    <p>Screenwriter: {listOf(currentMovie.screenwriter)}</p>
                     <div className="description">
-                        {currentMovie.fieldDescription}
+                        {currentMovie.description}
                     </div>
                 </div>
             </article> : <Error text='Something went wrong!' />}

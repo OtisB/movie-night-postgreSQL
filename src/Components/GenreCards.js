@@ -13,7 +13,7 @@ export default function GenreCards() {
     if (genre === "all") genreMovies = movies;
     else
       genreMovies = movies.filter(
-        (movie) => movie.fieldGenre.toLowerCase() === genre
+        (movie) => movie.genre.toLowerCase() === genre
       );
 
     return genreMovies;
@@ -25,7 +25,7 @@ export default function GenreCards() {
         <div className="genre-cards-row">
           {checkForMovies() && genreMovies.length ? (
             genreMovies.map((movie) => (
-              <MovieCardSmall {...movie} key={movie.id} />
+              <MovieCardSmall {...movie} key={movie.movie_id} />
             ))
           ) : (
             <Error text="Nothing to show yet" />
