@@ -56,7 +56,7 @@ function MovieCards({ movies }) {
       <div className="cards-container">
         {shownMovies.map(shownMovie => {
           return (
-            <MovieCardSmall {...shownMovie} key={shownMovie.id} />
+            <MovieCardSmall {...shownMovie} key={shownMovie.movie_id} />
           )
         })}
       </div>
