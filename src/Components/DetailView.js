@@ -26,20 +26,20 @@ function DetailView() {
     };
 
     return (
-        <>
+        <section className="detail-section">
             {currentMovie !== undefined ? <article key={currentMovie.movie_id} className="detail-view-container">
-                <figure>
-                    <img
-                        className="detail-view-image"
-                        src={currentMovie.picture_big}
-                        alt={currentMovie.movie_title}
-                    />
-                </figure>
+                <img
+                    className="detail-view-image"
+                    src={currentMovie.picture_big}
+                    alt={currentMovie.movie_title}
+                />
+
                 <div className="detail-view-info">
                     <h2>{currentMovie.movie_title}</h2>
-                    <p>FSK: {currentMovie.fsk}</p>
                     <p>Rating: <Rating rating={currentMovie.rating} /></p>
+                    <p>Genre: {currentMovie.genre}</p>
                     <p>Runtime: {currentMovie.runtime} Minutes</p>
+                    <p>FSK: {currentMovie.fsk}</p>
                     <p>Production Year: {currentMovie.year_of_publication}</p>
                     <p>Directors: {listOf(currentMovie.director)}</p>
                     <p>Actors: {listOf(currentMovie.actors)}</p>
@@ -49,7 +49,7 @@ function DetailView() {
                     </div>
                 </div>
             </article> : <Error text='Something went wrong!' />}
-        </>
+        </section>
     );
 }
 
