@@ -10,8 +10,11 @@ export default function GenreCards() {
   let genreMovies = [];
 
   const checkForMovies = () => {
-    if (genre === 'all') genreMovies = movies;
-    else genreMovies = movies.filter(movie => movie.fieldGenre.toLowerCase() === genre);
+    if (genre === "all") genreMovies = movies;
+    else
+      genreMovies = movies.filter(
+        (movie) => movie.fieldGenre.toLowerCase() === genre
+      );
 
     return genreMovies;
   };
@@ -20,10 +23,15 @@ export default function GenreCards() {
     <>
       <section className="genre-section">
         <div className="genre-cards-row">
-          {checkForMovies() && genreMovies.length ? genreMovies.map(movie => <MovieCardSmall {...movie} key={movie.id} />) : <Error text='Nothing to show yet' />}
+          {checkForMovies() && genreMovies.length ? (
+            genreMovies.map((movie) => (
+              <MovieCardSmall {...movie} key={movie.id} />
+            ))
+          ) : (
+            <Error text="Nothing to show yet" />
+          )}
         </div>
       </section>
     </>
-  )
+  );
 }
-
