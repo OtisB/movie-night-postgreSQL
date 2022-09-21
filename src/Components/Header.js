@@ -27,7 +27,7 @@ function Header() {
           <NavLink to="/genre/horror">
             <li>Horror</li>
           </NavLink>
-          <NavLink to="/genre/fantasie">
+          <NavLink to="/genre/fantasy">
             <li>Fantasy</li>
           </NavLink>
           <NavLink to="/genre/thriller">
