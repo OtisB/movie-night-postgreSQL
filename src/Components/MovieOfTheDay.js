@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "./MovieOfTheDay.css";
 import Rating from "./Rating";
 
@@ -6,25 +6,23 @@ function MovieOfTheDay({ movies }) {
   let randomMovie = movies[Math.floor(Math.random() * movies.length)];
 
   return (
-    <section className='movie-of-the-day-section'>
-      <Link to={`/detail/${randomMovie.id}`}>
-        <div key={randomMovie.id} className="MovieOfTheDayWrapper">
+    <section className="movie-of-the-day-section">
+      <Link to={`/detail/${randomMovie.movie_id}`}>
+        <div key={randomMovie.movie_id} className="MovieOfTheDayWrapper">
           <div className="MovieOfTheDayImageContainer">
             <img
               className="MovieOfTheDayImage"
-              src={randomMovie.fieldImageQuer}
-              alt={randomMovie.fieldTitle}
+              src={randomMovie.picture_big}
+              alt={randomMovie.movie_title}
             />
           </div>
           <div className="SectionWrapper">
-            <h2>{randomMovie.fieldTitle}</h2>
+            <h2>{randomMovie.movie_title}</h2>
             <div className="InfoSectionWrapper">
-              <p>FSK: {randomMovie.fieldFsk}</p>{" "}
-
-              <Rating rating={randomMovie.fieldRating} />
-
-              <p>Runtime: {randomMovie.fieldRuntime} min</p>
-              <p>Production Year: {randomMovie.fieldYearOfPuplication}</p>
+              <p>FSK: {randomMovie.fsk}</p>{" "}
+              <Rating rating={randomMovie.rating} />
+              <p>Runtime: {randomMovie.runtime} min</p>
+              <p>Production Year: {randomMovie.year_of_publication}</p>
             </div>
           </div>
         </div>
