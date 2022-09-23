@@ -10,7 +10,7 @@ function useDataFetch() {
 
   async function getMovies() {
     try {
-      const response = await fetch("http://localhost:8080/");
+      const response = await fetch("https://your-movie-night-api.onrender.com/");
       const data = await response.json();
 
       const moviesArray = Array.from(data);
